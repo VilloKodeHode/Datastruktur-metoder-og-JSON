@@ -1,57 +1,63 @@
 const peopleArrayWithObjects = [
-    {
-        id: 1,
-        name: "Alice",
-        age: 28,
-        email: "alice@example.com",
-        country: "USA",
-        hobbies: ["Reading", "Hiking", "Photography", "Swimming"]
-    },
-    {
-        id: 2,
-        name: "Bob",
-        age: 35,
-        email: "bob@example.com",
-        country: "Canada",
-        hobbies: ["Cooking", "Playing guitar", "Gardening", "Traveling"]
-    },
-    {
-        id: 3,
-        name: "Charlie",
-        age: 22,
-        email: "charlie@example.com",
-        country: "UK",
-        hobbies: ["Painting", "Skiing", "Music", "Cycling"]
-    },
-    {
-        id: 4,
-        name: "David",
-        age: 40,
-        email: "david@example.com",
-        country: "Australia",
-        hobbies: ["Swimming", "Fishing", "Reading"]
-    },
-    {
-        id: 5,
-        name: "Eva",
-        age: 32,
-        email: "eva@example.com",
-        country: "Germany",
-        hobbies: ["Skiing", "Playing Guitar", "Photography", "Cooking"]
-    }
-]
-
+  {
+    id: 1,
+    name: "Alice",
+    age: 28,
+    email: "alice@example.com",
+    country: "USA",
+    hobbies: ["Reading", "Hiking", "Photography", "Swimming"],
+  },
+  {
+    id: 2,
+    name: "Bob",
+    age: 35,
+    email: "bob@example.com",
+    country: "Canada",
+    hobbies: ["Cooking", "Playing guitar", "Gardening", "Traveling"],
+  },
+  {
+    id: 3,
+    name: "Charlie",
+    age: 22,
+    email: "charlie@example.com",
+    country: "UK",
+    hobbies: ["Painting", "Skiing", "Music", "Cycling"],
+  },
+  {
+    id: 4,
+    name: "David",
+    age: 40,
+    email: "david@example.com",
+    country: "Australia",
+    hobbies: ["Swimming", "Fishing", "Reading"],
+  },
+  {
+    id: 5,
+    name: "Eva",
+    age: 32,
+    email: "eva@example.com",
+    country: "Germany",
+    hobbies: ["Skiing", "Playing Guitar", "Photography", "Cooking"],
+  },
+];
 
 //! 1.
 
 /* console.log the array */
+console.log(peopleArrayWithObjects);
 
 //! 1.1:
 
 /* create variables for firstPerson (first person object in the array) and lastPerson (last person object in the array) for peopleArrayWithObjects: */
+const firstPerson = peopleArrayWithObjects[0];
+console.log(firstPerson);
+const lastPerson = peopleArrayWithObjects[peopleArrayWithObjects.length - 1];
+console.log(lastPerson);
 
 //! 1.2
 
+console.log(Object.entries(firstPerson));
+console.log(Object.entries(lastPerson));
 /* console.log all the objects of the first and last persons using Object.entries. Expected output: 
 (6) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
 */
@@ -59,13 +65,22 @@ const peopleArrayWithObjects = [
 //! 1.3
 /* console.log the hobbies of the first person using Object.entries. Expected output is to be an array with 4 elements */
 
+console.log(Object.entries(firstPerson.hobbies));
+console.log(Object.entries(lastPerson.hobbies));
+
 //! 1.4
 
 /* Use .map instead of Object.entries to achieve the same result in the console as in 1.3: */
 
+console.log(peopleArrayWithObjects.map((hobby) => hobby.hobbies));
+
 //! 1.5.
 
 /* Use .filter and .includes to find out which hobbies are common between firstPerson and lastPerson. Expected output is an array with common hobbies */
+
+//console.log(
+//firstPerson["hobbies"].filter(([value,2]) => typeof value === "Photography")
+//);
 
 //! 1.6.
 
